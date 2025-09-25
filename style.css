@@ -1,0 +1,602 @@
+/* Basic Setup */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e2a40; /* Fallback color */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ============ REFINED HERO SECTION STYLING ============ */
+
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('https://placehold.co/1920x1080/1e2a40/FFFFFF?text=Background+Image'); /* Placeholder URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Logos */
+.hero-header {
+    display: flex;
+    justify-content: space-between; /* Pushes logo groups to the ends */
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem; /* Reduced gap */
+    font-size: 0.75rem; /* Reduced font size for compactness */
+    font-weight: bold;
+}
+
+.logo {
+    height: 45px; /* Slightly adjusted logo size */
+}
+
+/* Main Content Grid */
+.hero-main {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.5rem; /* Reduced gap between columns */
+    padding-top: 1rem;
+}
+
+/* Left & Right Columns */
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Left Column Content */
+.main-title {
+    font-size: 8rem; /* Slightly smaller for better fit */
+    font-weight: 900;
+    line-height: 0.95; /* Tighter line spacing */
+    color: #ffd700;
+    margin: 0;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.benefits-section h2 {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+.benefits-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.benefits-section li {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffd700' class='bi bi-check-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3E%3C/svg%3E") no-repeat left center;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section {
+    margin-top: auto ;
+    padding-top: auto;
+}
+
+.contact-section h3, .registration-section h3 {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+    margin: 0.2rem 0;
+}
+
+
+/* Right Column Content */
+.right-column {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.acces-branding {
+    margin-bottom: 2rem;
+}
+
+.acces-logo-large {
+    width: 110px; /* Adjusted size */
+    margin-bottom: 0.8rem; /* Adjusted margin */
+}
+
+.acces-branding p {
+    font-size: 1.4rem; /* Adjusted font size */
+    font-weight: bold;
+    line-height: 1.15; /* Adjusted line height */
+    margin: 0;
+}
+
+.acces-branding span {
+    font-size: 0.9rem; /* Adjusted font size */
+    font-weight: normal;
+}
+
+.registration-section {
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly darker for better contrast */
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content; /* Makes the box wrap its content */
+    margin-left: auto; /* Pushes the box to the right */
+}
+
+.registration-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0d6efd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s;
+}
+
+.registration-link:hover {
+    background-color: #0b5ed7;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+/* ========= PROGRAM DETAILS & PARTNERS SECTION ========= */
+
+.details-section {
+    background-color: #1a263a; /* Dark blue from poster */
+    padding: 4rem 2rem;
+    color: #ffffff;
+}
+
+/* General container for centering content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Part 1: Program Overview */
+.program-overview {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: #1e2a40; /* Slightly lighter blue */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.overview-logo-box {
+    flex-basis: 30%;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overview-logo-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.overview-text {
+    flex-basis: 70%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.overview-text strong {
+    color: #ffd700; /* Gold color */
+    font-weight: 700;
+}
+
+
+/* Part 2: Main Focus */
+.main-focus {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #131c2b; /* Even darker blue */
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid #ffd700; /* Gold accent */
+    margin-bottom: 4rem;
+}
+
+.focus-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.focus-icons img {
+    border-radius: 50%;
+}
+
+.focus-text h3 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.focus-text p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Part 3: Partners */
+.partners-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.partners-grid {
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 10px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.partner-category h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 0.8rem;
+}
+
+.logo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.logo-gallery img {
+    max-height: 50px; /* Control logo height */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ========= CRITERIA & TIMELINE SECTION ========= */
+.criteria-timeline-section {
+    position: relative;
+    padding: 4rem 2rem;
+    background-image: url('https://placehold.co/1920x1080/555555/ffffff?text=Cityscape+Background');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    color: #ffffff;
+}
+
+/* Dark overlay for text readability */
+.criteria-timeline-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 38, 58, 0.85); /* 85% opacity of the dark blue */
+    z-index: 1;
+}
+
+/* Make sure content is above the overlay */
+.criteria-timeline-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.criteria-wrapper, .timeline-wrapper {
+    margin-bottom: 4rem;
+}
+
+.criteria-wrapper h2, .timeline-wrapper h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+
+/* Criteria Grid */
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(19, 28, 43, 0.7);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.criteria-item {
+    padding: 1.5rem;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.criteria-item:last-child {
+    border-right: none;
+}
+
+.criteria-item h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.criteria-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Timeline Container */
+/* ========= CORRECTED TIMELINE CSS ========= */
+
+.timeline-wrapper h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+
+/* The main container that holds the timeline */
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* The central vertical line */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #ffd700;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Precisely center the line */
+}
+
+/* A single event/item in the timeline */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box; /* Prevents padding from breaking the layout */
+}
+
+/* Place ODD items (1, 3, 5) on the LEFT */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Place EVEN items (2, 4, 6) on the RIGHT */
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+/* The content box holding the text */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #131c2b; /* Darker background for contrast */
+    border-radius: 8px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #ffd700;
+}
+.timeline-content p {
+    margin-bottom: 0;
+}
+
+/* Keep the responsive styles for mobile */
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+    
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+    }
+    
+    .timeline-item::after {
+        left: 10px; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+    .criteria-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .criteria-item:last-child {
+        border-bottom: none;
+    }
+}
+
+.timeline-content {
+    text-align: center;
+    padding: 1.2rem 1rem; /* Adjust padding to give text more room */
+}
+
+/* Make the event title font larger */
+.timeline-content h3 {
+    font-size: 1.2rem; /* You can increase this value if you like */
+    margin-bottom: 0.5rem; 
+}
+
+/* Make the date font slightly larger */
+.timeline-content p {
+    font-size: 0.95rem; /* You can increase this value if you like */
+}
+
+/* ========= FINANCING SCHEMES & FINAL CTA SECTION ========= */
+
+.schemes-section {
+    background-color: #1a263a;
+    padding: 4rem 2rem;
+    color: #ffffff;
+}
+
+.schemes-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffd700;
+}
+
+.schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.scheme-card {
+    background-color: #1e2a40;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a3a52;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scheme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.scheme-card img {
+    margin-bottom: 1rem;
+    height: 70px;
+}
+
+.scheme-card h3 {
+    color: #ffd700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.scheme-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* Final Call to Action */
+.final-cta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #131c2b;
+    padding: 2.5rem;
+    border-radius: 15px;
+    border-top: 4px solid #ffd700;
+}
+
+.cta-qr img {
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    display: block;
+}
+
+.cta-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.cta-link {
+    display: inline-block;
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.cta-link:hover {
+    background-color: #0b5ed7;
+}
+
+.cta-contact h4 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #ffd700;
+}
+
+.cta-contact p {
+    margin: 0.2rem 0;
+}
+
+/* Responsive adjustments for this section */
+@media (max-width: 992px) {
+    .schemes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .final-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .schemes-grid {
+        grid-template-columns: 1fr;
+    }
+}
