@@ -162,7 +162,7 @@ body {
     height: auto;
 }
 
-/* UPDATED: Styles for the new "Manfaat" layout */
+/* UPDATED: Styles for the new "Manfaat" horizontal layout */
 .overview-text {
     width: 100%;
 }
@@ -178,19 +178,21 @@ body {
 .manfaat-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
+    gap: 2rem; /* Space between each benefit item */
 }
 
 .manfaat-item {
-    text-align: center;
-    max-width: 300px;
+    display: flex;
+    flex-direction: row; /* Aligns icon and text horizontally */
+    align-items: center;  /* Vertically centers icon with text */
+    text-align: left;
 }
 
 .manfaat-item .manfaat-icon {
-    max-width: 120px;
+    flex-shrink: 0;
+    max-width: 60px; /* UPDATED: Reduced icon size */
     height: auto;
-    margin-bottom: 1rem;
+    margin-right: 1.2rem; /* Space between icon and text */
 }
 
 .manfaat-item p {
@@ -204,32 +206,36 @@ body {
     color: #F5E1AB;
 }
 
-.program-overview .cta-button {
-    margin-top: 1rem;
-}
-
+/* UPDATED: Changed to horizontal layout for "Fokus Utama" */
 .main-focus {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    flex-direction: row; /* Lays out icon and text side-by-side */
+    align-items: center; /* Vertically aligns icon and text */
+    text-align: left;
+    gap: 1.5rem; /* Space between icon and text block */
     background-color: #131c2b;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 10px;
     border-top: 4px solid #F5E1AB;
     margin-bottom: 3rem;
 }
 
+.focus-icons .focus-image {
+    flex-shrink: 0;
+    max-width: 50px; /* UPDATED: Reduced icon size to fit layout */
+    height: auto;
+}
+
 .focus-text h3 {
     color: #F5E1AB;
     font-size: 1.4rem;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.25rem 0; /* Adjusted margin */
 }
 
 .focus-text p {
     margin: 0;
     font-size: 1rem;
+    opacity: 0.9;
 }
 
 .partners-section h2 {
@@ -264,7 +270,6 @@ body {
     justify-content: center; /* Center logos */
 }
 
-/* FIX: Made partner logos responsive */
 .logo-gallery img {
     max-height: 40px;
     max-width: 100px;
@@ -390,10 +395,9 @@ body {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid #2a3a52;
+    border: 1px solid #2a524e;
 }
 
-/* FIX: Made scheme icons responsive */
 .scheme-card img, .scheme-card svg {
     margin-bottom: 1rem;
     height: 60px;
@@ -453,7 +457,7 @@ body {
 }
 
 .cta-button:active {
-    transform: scale(0.98); /* Add active state for mobile touch */
+    transform: scale(0.98);
 }
 
 .cta-contact {
@@ -471,14 +475,4 @@ body {
 .cta-contact p {
     margin: 0.2rem 0;
     font-size: 1rem;
-}
-
-.icon-placeholder {
-    stroke: #F5E1AB;
-    margin-bottom: 1rem;
-}
-
-.focus-icons .focus-image {
-    max-width: 160px; /* You can adjust this value to make the icon bigger or smaller */
-    height: auto;     /* This maintains the image's aspect ratio */
 }
