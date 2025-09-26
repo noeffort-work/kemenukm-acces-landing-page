@@ -69,9 +69,10 @@ body {
     padding: 1rem 0;
 }
 
-/* NEW: Small ACCES Logo Style */
+/* FIX: Made hero logo responsive using a percentage and height: auto */
 .hero-acces-logo {
-    max-width: 360px; /* Adjust size as needed */
+    max-width: 80%;
+    height: auto;
     margin-bottom: 1.5rem;
 }
 
@@ -161,47 +162,43 @@ body {
     height: auto;
 }
 
-/* Styling for the new "Manfaat" list */
+/* UPDATED: Styles for the new "Manfaat" layout */
 .overview-text {
-    text-align: left; /* Align text to the left as per the image */
-    width: 100%; 
-    padding: 0 1rem; /* Add some internal padding */
-    box-sizing: border-box;
+    width: 100%;
 }
 
 .manfaat-title {
-    color: #F5E1AB; /* Gold color for the title */
+    color: #F5E1AB;
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-weight: 700;
+    text-align: center;
 }
 
-.manfaat-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+.manfaat-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.manfaat-list li {
-    display: flex; /* Use flexbox for icon and text alignment */
-    align-items: flex-start; /* Align icon and text to the top */
-    margin-bottom: 1.2rem; /* More space between list items */
+.manfaat-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.manfaat-item .manfaat-icon {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.manfaat-item p {
     font-size: 1.05rem;
     line-height: 1.5;
+    margin: 0;
 }
-
-.manfaat-list li .manfaat-icon {
-    flex-shrink: 0; /* Prevent icon from shrinking */
-    width: 28px; /* Slightly larger icon size */
-    height: 28px;
-    margin-right: 0.8rem; /* Space between icon and text */
-    margin-top: 0.15em; /* Adjust vertical alignment if needed */
-    filter: brightness(1.2); /* Make icons slightly brighter if they are dark */
-}
-
-.manfaat-list li span {
-    display: block; /* Ensures text wraps correctly */
-}
+/* End of new Manfaat styles */
 
 .overview-text strong {
     color: #F5E1AB;
@@ -213,7 +210,7 @@ body {
 
 .main-focus {
     display: flex;
-    flex-direction: column; /* Stack icon and text */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
@@ -267,9 +264,12 @@ body {
     justify-content: center; /* Center logos */
 }
 
+/* FIX: Made partner logos responsive */
 .logo-gallery img {
     max-height: 40px;
+    max-width: 100px;
     width: auto;
+    height: auto;
     object-fit: contain;
 }
 
@@ -393,9 +393,11 @@ body {
     border: 1px solid #2a3a52;
 }
 
+/* FIX: Made scheme icons responsive */
 .scheme-card img, .scheme-card svg {
     margin-bottom: 1rem;
     height: 60px;
+    width: auto;
 }
 
 .scheme-card h3 {
