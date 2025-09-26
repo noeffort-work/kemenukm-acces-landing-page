@@ -1,15 +1,13 @@
-/* REMOVED @import from the top of this file */
-
 /* Basic Setup */
 body {
     margin: 0;
-    font-family: 'Koho'; /* CORRECTED font-family fallback */
+    font-family: 'Koho', sans-serif;
     background-color: #1e2a40; 
     color: #ffffff;
     overflow-x: hidden;
 }
 
-/* ============ REFINED HERO SECTION STYLING ============ */
+/* ============ HERO SECTION STYLING ============ */
 .hero-section {
     min-height: 100vh;
     width: 100%;
@@ -31,7 +29,6 @@ body {
     flex-direction: column;
 }
 
-/* Header Logos */
 .hero-header {
     display: flex;
     justify-content: space-between;
@@ -51,7 +48,6 @@ body {
     height: 45px;
 }
 
-/* Main Content Grid */
 .hero-main {
     flex-grow: 1;
     display: grid;
@@ -60,14 +56,12 @@ body {
     padding-top: 1rem;
 }
 
-/* Left & Right Columns */
-.left-column, .right-column {
+.left-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Left Column Content */
 .main-title {
     font-size: 12rem;
     font-weight: 900;
@@ -96,83 +90,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.contact-section {
-    margin-top: auto;
-    padding-top: 2rem;
-}
-
-.contact-section h3, .registration-section h3 {
-    font-size: 1.5rem;
-    color: #F5E1AB;
-    margin-bottom: 0.5rem;
-}
-
-.contact-section p {
-    margin: 0.2rem 0;
-}
-
-
-/* Right Column Content */
-.right-column {
-    align-items: flex-end;
-    text-align: right;
-}
-
-.acces-branding {
-    margin-bottom: 2rem;
-}
-
-.acces-logo-large {
-    width: 110px;
-    margin-bottom: 0.8rem;
-}
-
-.acces-branding p {
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.15;
-    margin: 0;
-}
-
-.acces-branding span {
-    font-size: 0.9rem;
-    font-weight: normal;
-}
-
-.registration-section {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 1.5rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    margin-left: auto;
-}
-
-.registration-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #0d6efd;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s;
-}
-
-.registration-link:hover {
-    background-color: #0b5ed7;
-}
-
-.qr-code {
-    width: 150px;
-    height: 150px;
-    border: 5px solid white;
-    border-radius: 5px;
-}
-
 /* ============ PROGRAM DETAILS & PARTNERS SECTION ============ */
 .details-section {
     background-color: #22476D;
@@ -183,10 +100,6 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-}
-
-.program-overview .cta-button {
-    margin-top: 1.5rem;
 }
 
 .program-overview {
@@ -220,9 +133,41 @@ body {
 
 .overview-text strong {
     color: #F5E1AB;
+}
+
+/* ADDED: Styles for the new "Manfaat" section, copied from mobile */
+.manfaat-title {
+    color: #F5E1AB;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
     font-weight: 700;
 }
 
+.manfaat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.manfaat-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.manfaat-item .manfaat-icon {
+    flex-shrink: 0;
+    max-width: 60px;
+    height: auto;
+    margin-right: 1.2rem;
+}
+
+.manfaat-item p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+}
 
 .main-focus {
     display: flex;
@@ -235,13 +180,9 @@ body {
     margin-bottom: 4rem;
 }
 
-.focus-icons {
-    display: flex;
-    gap: 1rem;
-}
-
-.focus-icons img {
-    border-radius: 50%;
+.focus-text {
+    text-align: center;
+    width: 100%;
 }
 
 .focus-text h3 {
@@ -295,24 +236,8 @@ body {
 
 /* ============ CRITERIA & TIMELINE SECTION ============ */
 .criteria-timeline-section {
-    position: relative;
     padding: 4rem 2rem;
     background-color: #22476D;
-}
-
-.criteria-timeline-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.criteria-timeline-section .container {
-    position: relative;
-    z-index: 2;
 }
 
 .criteria-wrapper, .timeline-wrapper {
@@ -399,7 +324,6 @@ body {
     background-color: #131c2b;
     border-radius: 8px;
     position: relative;
-    text-align: center;
 }
 
 .timeline-content h3 {
@@ -412,36 +336,6 @@ body {
 .timeline-content p {
     margin-bottom: 0;
     font-size: 0.95rem;
-}
-
-@media screen and (max-width: 768px) {
-    .timeline-container::after {
-        left: 20px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 30px;
-        padding-right: 15px;
-    }
-    
-    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
-        left: 0;
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .criteria-grid {
-        grid-template-columns: 1fr;
-    }
-    .criteria-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .criteria-item:last-child {
-        border-bottom: none;
-    }
 }
 
 /* ============ FINANCING SCHEMES & FINAL CTA SECTION ============ */
@@ -479,9 +373,10 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.scheme-card img {
+.scheme-card svg {
     margin-bottom: 1rem;
     height: 70px;
+    stroke: #F5E1AB;
 }
 
 .scheme-card h3 {
@@ -496,25 +391,23 @@ body {
     margin: 0;
 }
 
-/* ============ FINAL CTA SECTION STYLING ============ */
 .final-cta {
     display: flex;
     align-items: center;
-    gap: 3rem; /* Increased gap */
+    gap: 3rem;
     background-color: #131c2b;
-    padding: 3rem; /* Increased padding */
+    padding: 3rem;
     border-radius: 15px;
     border-top: 4px solid #F5E1AB;
 }
 
-.cta-qr img {
-    border: 5px solid #ffffff;
-    border-radius: 10px;
-    display: block;
+.cta-info {
+    text-align: center;
+    width: 100%;
 }
 
 .cta-info h3 {
-    font-size: 2.2rem; /* Larger heading */
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     color: #F5E1AB;
@@ -523,19 +416,17 @@ body {
 .cta-subtitle {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    max-width: 450px; /* Limit line length for readability */
     opacity: 0.9;
 }
 
-/* This replaces the old .cta-link style */
 .cta-button {
     display: inline-block;
-    background-color: #F5E1AB; /* Gold color to match theme */
-    color: #131c2b; /* Dark blue text for contrast */
+    background-color: #F5E1AB;
+    color: #131c2b;
     padding: 1rem 2.5rem;
     border-radius: 8px;
     font-size: 1.2rem;
-    font-weight: 700; /* Bold Koho font */
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -560,40 +451,4 @@ body {
 
 .cta-contact p {
     margin: 0.2rem 0;
-}
-
-/* Responsive adjustment for the CTA */
-@media (max-width: 768px) {
-    .final-cta {
-        flex-direction: column;
-        text-align: center;
-    }
-    .cta-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 576px) {
-    .schemes-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.icon-placeholder {
-    stroke: #F5E1AB; /* Sets the gold color for the lines */
-    margin-bottom: 1rem;
-}
-
-/* ============ FINAL CTA SECTION (CENTERED) ============ */
-
-.final-cta {
-    /* Change flex-direction to stack content vertically */
-    flex-direction: column; 
-    gap: 1.5rem; /* Adjust gap for vertical stacking */
-}
-
-.cta-info {
-    /* Center all text and the button inside this container */
-    text-align: center;
 }
