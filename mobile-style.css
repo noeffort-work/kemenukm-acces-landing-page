@@ -38,25 +38,19 @@ body {
 /* NEW: Header Styles */
 .hero-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align logo to the left */
     align-items: center;
     width: 100%;
     padding: 0.5rem 0.5rem;
     flex-shrink: 0;
 }
+/* UPDATED: Made the header logo responsive */
 .header-logo img {
-    height: 35px; /* Adjust as needed */
-    width: auto;
+    width: 45%;         /* Set width relative to the screen */
+    max-width: 180px;   /* Prevent it from getting too large */
+    height: auto;       /* Ensure the aspect ratio is maintained */
 }
-.menu-icon {
-    background-color: #F5E1AB;
-    color: #1e2a40;
-    padding: 0.5rem;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 /* Main Content Area */
 .hero-main {
@@ -200,7 +194,7 @@ body {
     line-height: 1.5;
     margin: 0;
 }
-/* End of new Manfaat styles */
+/* End of Manfaat styles */
 
 .overview-text strong {
     color: #F5E1AB;
