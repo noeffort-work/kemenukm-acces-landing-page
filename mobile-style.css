@@ -1,0 +1,430 @@
+/* =============================================== */
+/* ==      MOBILE-ONLY STYLESHEET - V1.0      == */
+/* =============================================== */
+
+/* Basic Setup */
+body {
+    margin: 0;
+    font-family: 'Koho', sans-serif;
+    background-color: #1e2a40; 
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Helper Class */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Add side padding */
+    box-sizing: border-box;
+}
+
+
+/* ============ HERO SECTION (NEW DESIGN V3 - LARGER & COMPACT) ============ */
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(30, 42, 64, 0.5), rgba(30, 42, 64, 0.8)), url('asset/bghero4.png');
+    background-size: cover;
+    background-position: center;
+    
+    /* Core layout: Flex column, centering everything */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.hero-header {
+    width: 100%;
+    padding-bottom: 1rem;
+    /* Making header non-intrusive */
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 40px;
+    opacity: 0.9;
+}
+
+.hero-main {
+    /* This centers the main content block vertically */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    /* MASSIVELY INCREASED: Font size is now much larger and scales more aggressively */
+    font-size: clamp(7.5rem, 33vw, 12rem); 
+    font-weight: 900;
+    line-height: 0.9; /* Tighter line height for the large text */
+    color: #F5E1AB;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-tagline {
+    /* INCREASED: Font size is larger */
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.9;
+    /* REDUCED: Margins are smaller to tighten the layout */
+    margin: 1rem 0 2rem 0; 
+    max-width: 350px;
+    line-height: 1.4;
+}
+
+.hero-cta {
+    display: inline-block;
+    background-color: #F5E1AB;
+    color: #131c2b;
+    padding: 1.2rem 3rem;
+    border-radius: 8px;
+    /* INCREASED: Font size is larger */
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+}
+
+.hero-cta:active {
+    transform: scale(0.98);
+}
+
+/* MODIFIED: Styling for benefits now it's inside hero-main */
+.benefits-section {
+    /* Adds space above the benefits list */
+    margin-top: 3rem; 
+}
+
+.benefits-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+.benefits-section li {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23F5E1AB' class='bi bi-check-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3E%3C/svg%3E") no-repeat left center;
+    padding-left: 25px;
+    /* INCREASED: Font size is now larger */
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem; /* Slightly more space between items */
+    opacity: 0.9;
+}
+
+/* REMOVED: .hero-footer rule is no longer needed */
+
+/* ============ PROGRAM DETAILS & PARTNERS SECTION ============ */
+.details-section {
+    background-color: #22476D;
+    padding: 3rem 0;
+}
+
+.program-overview {
+    display: flex;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    background-color: #1e2a40;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+}
+
+.overview-logo-box {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.overview-logo-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.overview-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.overview-text strong {
+    color: #F5E1AB;
+}
+
+.program-overview .cta-button {
+    margin-top: 1rem;
+}
+
+.main-focus {
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: #131c2b;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    border-top: 4px solid #F5E1AB;
+    margin-bottom: 3rem;
+}
+
+.focus-text h3 {
+    color: #F5E1AB;
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.focus-text p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.partners-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.partners-grid {
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 2rem;
+}
+
+.partner-category h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 0.8rem;
+}
+
+.logo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center; /* Center logos */
+}
+
+.logo-gallery img {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ============ CRITERIA & TIMELINE SECTION ============ */
+.criteria-timeline-section {
+    padding: 3rem 0;
+    background-color: #22476D;
+}
+
+.criteria-wrapper, .timeline-wrapper {
+    margin-bottom: 3rem;
+}
+
+.criteria-wrapper h2, .timeline-wrapper h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #F5E1AB;
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Force single column */
+    background-color: rgba(19, 28, 43, 0.7);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.criteria-item {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Use bottom border */
+}
+
+.criteria-item:last-child {
+    border-bottom: none;
+}
+
+.criteria-item h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.criteria-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Mobile-first timeline styles */
+.timeline-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #F5E1AB;
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Position line to the left */
+    transform: none;
+}
+
+.timeline-item {
+    padding: 10px 0 10px 40px; /* Adjust padding for left-aligned timeline */
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; /* All text is left-aligned */
+}
+
+.timeline-content {
+    padding: 1.2rem 1rem;
+    background-color: #131c2b;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #F5E1AB;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem; 
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+
+/* ============ FINANCING SCHEMES & FINAL CTA SECTION ============ */
+.schemes-section {
+    background-color: #22476D;
+    padding: 3rem 0;
+}
+
+.schemes-section .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #F5E1AB;
+}
+
+.schemes-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.scheme-card {
+    background-color: #1e2a40;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a3a52;
+}
+
+.scheme-card img, .scheme-card svg {
+    margin-bottom: 1rem;
+    height: 60px;
+}
+
+.scheme-card h3 {
+    color: #F5E1AB;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.scheme-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Final CTA */
+.final-cta {
+    display: flex;
+    flex-direction: column; /* Force vertical stacking */
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background-color: #131c2b;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    border-top: 4px solid #F5E1AB;
+}
+
+.cta-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #F5E1AB;
+}
+
+.cta-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #F5E1AB;
+    color: #131c2b;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:active {
+    transform: scale(0.98); /* Add active state for mobile touch */
+}
+
+.cta-contact {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.cta-contact h4 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #F5E1AB;
+}
+
+.cta-contact p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+}
+
+.icon-placeholder {
+    stroke: #F5E1AB;
+    margin-bottom: 1rem;
+}
